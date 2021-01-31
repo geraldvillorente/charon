@@ -1,6 +1,7 @@
 package app
 
 import (
+	"github.com/geraldvillorente/charon/app/models"
 	"github.com/revel/revel"
 )
 
@@ -30,7 +31,7 @@ func init() {
 		revel.ActionInvoker,           // Invoke the action.
 	}
 
-	//revel.OnAppStart(models.Init_DB)
+	revel.OnAppStart(models.Init_DB)
 
 	// Register startup functions with OnAppStart
 	// revel.DevMode and revel.RunMode only work inside of OnAppStart. See Example Startup Script
